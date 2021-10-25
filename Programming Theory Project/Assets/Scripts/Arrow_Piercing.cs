@@ -6,7 +6,7 @@ public class Arrow_Piercing : Arrow
 {
     
     public Arrow_Piercing(){
-        speed = 10f;
+        speed = 15f;
         damage = 5;
         lifeTime = 5f;
     }
@@ -14,7 +14,7 @@ public class Arrow_Piercing : Arrow
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Ennemy")){
             Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(), GetComponent<Collider>()); //The arrow passes through the target regardless of the Rigibody, to simulate the piercing effect.
-            other.gameObject.GetComponent<Ennemy>().pv -= damage;
+            other.gameObject.GetComponent<Enemy>().pv -= damage;
         }
     }
     

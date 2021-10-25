@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ennemy_Regular : Ennemy
+public class Enemy_Regular : Enemy
 {
 
 
-    public Ennemy_Regular(){
+    public Enemy_Regular(){
         pv = 10;
     }
 }

@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5509686019125677552}
-  m_LocalRotation: {x: 0.22194535, y: 0.0014583564, z: -0.00032951936, w: 0.97505796}
-  m_LocalPosition: {x: 0, y: 4.5000005, z: -5}
+  m_LocalRotation: {x: 0.5723034, y: 0, z: 0, w: 0.820042}
+  m_LocalPosition: {x: 0, y: 8, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5509686019425703932}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 69.822, y: 0, z: 0}
 --- !u!20 &5509686019125677554
 Camera:
   m_ObjectHideFlags: 0
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow:
   - {fileID: 1171281060924607152, guid: fd409906fc5755c44a75ed216d86ef32, type: 3}
+  - {fileID: 8392338384638888267, guid: 515310160956b824fa87c7b036c71224, type: 3}
   arrowTypeSelected: 0
 --- !u!1 &5509686019425703926
 GameObject:
@@ -257,7 +258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5336c41cdde6d4bb3d63927a7a175d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 500
+  pv: 10
+  maxPv: 10
   playerRb: {fileID: 0}
 --- !u!1001 &5368958004681322256
 PrefabInstance:

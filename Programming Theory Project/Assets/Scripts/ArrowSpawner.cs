@@ -18,6 +18,8 @@ public class ArrowSpawner : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)){
             LaunchArrow();
         }
+
+        transform.rotation = GameObject.Find("Player").transform.rotation;
     }
 
     void LaunchArrow(){

@@ -25,6 +25,6 @@ public class Arrow : MonoBehaviour
     }
 
     void Move(){
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
     }
 }
