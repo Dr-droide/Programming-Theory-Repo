@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed { get; set;}
+    public float speed { get; set; }
     private float rotateSpeed;
     public int pv = 10;
     public int maxPv = 10;
@@ -14,18 +14,25 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        speed = 5f;
+        speed = 10f;
         rotateSpeed = 100f;
         playerRb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        Move();
+        if (!GameManager.Instance.gameOver)
+        {
+            Move();
 
+            if (pv <= 0){
+                GameManager.Instance.GameOver();
+            }
+        }
     }
 
-    void Move(){
+    void Move()
+    {
         var horizontal = Input.GetAxis("Horizontal");
         var vertival = Input.GetAxis("Vertical");
         var rotate = Input.GetAxis("Rotate");

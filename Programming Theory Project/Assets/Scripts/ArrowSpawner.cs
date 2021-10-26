@@ -10,19 +10,32 @@ public class ArrowSpawner : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
-            LaunchArrow();
-        }
+        if (!GameManager.Instance.gameOver)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                LaunchArrow();
+            }
 
-        transform.rotation = GameObject.Find("Player").transform.rotation;
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                arrowTypeSelected = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                arrowTypeSelected = 1;
+            }
+            transform.rotation = GameObject.Find("Player").transform.rotation;
+        }
     }
 
-    void LaunchArrow(){
+    void LaunchArrow()
+    {
         Instantiate(arrow[arrowTypeSelected], transform.position, transform.rotation);
     }
 }

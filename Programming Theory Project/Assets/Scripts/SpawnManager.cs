@@ -8,8 +8,8 @@ public class SpawnManager : MonoBehaviour
     public int enemyCount;
 
 
-    private float xSpawn = 5;
-    private float zSpawn = 5;
+    private float xSpawn = 70;
+    private float zSpawn = 70;
 
 
     private void LateUpdate()
@@ -17,7 +17,7 @@ public class SpawnManager : MonoBehaviour
 
         enemyCount = FindObjectsOfType<Enemy>().Length;
 
-        if (enemyCount == 0)
+        if (enemyCount == 0 && !GameManager.Instance.gameOver)
         {
             GameManager.Instance.wave ++;
             if (GameManager.Instance.wave > 4){
@@ -33,20 +33,27 @@ public class SpawnManager : MonoBehaviour
         {
             case 1:
                 SpawnEnemy(enemies[0]);
+                SpawnEnemy(enemies[0]);
+                SpawnEnemy(enemies[0]);
                 break;
             case 2:
-                for (int i = 0; i < GameManager.Instance.wave; i++){
+                for (int i = 0; i < 3; i++){
                     SpawnEnemy(enemies[0]);
                 }
+                SpawnEnemy(enemies[1]);
+                SpawnEnemy(enemies[1]);
                 break;
             case 3:
-                for (int i = 0; i < GameManager.Instance.wave; i++){
+                for (int i = 0; i < 5; i++){
                     SpawnEnemy(enemies[0]);
                 }
+                SpawnEnemy(enemies[1]);
+                SpawnEnemy(enemies[1]);
+                SpawnEnemy(enemies[1]);
                 break;
             case 4:
-                for (int i = 0; i < GameManager.Instance.wave; i++){
-                    SpawnEnemy(enemies[0]);
+                for (int i = 0; i < 10; i++){
+                    SpawnEnemy(enemies[1]);
                 }
                 break;
             case 5:
