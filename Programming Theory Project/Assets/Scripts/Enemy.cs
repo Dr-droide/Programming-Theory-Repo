@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     {
 
         healthBar.value = pv;
-        if (!GameManager.Instance.gameOver)
+        if (!GameManager.Instance.gameOver && !GameManager.Instance.isPaused)
         {
             Move();
         }

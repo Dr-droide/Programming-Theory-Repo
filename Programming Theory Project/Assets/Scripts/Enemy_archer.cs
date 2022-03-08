@@ -22,7 +22,7 @@ public class Enemy_archer : Enemy
 
     void Shoot()
     {
-        if (!GameManager.Instance.gameOver)
+        if (!GameManager.Instance.gameOver && !GameManager.Instance.isPaused)
         {
             Instantiate(arrow, arrowSpawner.transform.position, transform.rotation);
         }

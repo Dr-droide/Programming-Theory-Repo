@@ -17,7 +17,7 @@ public class ArrowSpawner : MonoBehaviour
     {
         if (!GameManager.Instance.gameOver)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButtonDown(0))
             {
                 LaunchArrow();
             }
